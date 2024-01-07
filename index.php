@@ -1,4 +1,5 @@
 <?php include('config.php'); ?>
+<?php session_start(); ob_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,10 @@
         switch($go) {
             case 'login':
                 include 'login.php';
+            break;
+
+            case 'logout':
+                include 'logout.php';
             break;
 
             default:

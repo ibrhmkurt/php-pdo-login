@@ -16,10 +16,10 @@
             $l = $login->fetch(PDO::FETCH_ASSOC);
 
             if($l) {
-                echo '<span style="color:green;">You have successfully logged in!</span>';
+                //echo '<span style="color:green;">You have successfully logged in!</span>';
                 $_SESSION['name'] = $l['user_name'];
                 $_SESSION['nick'] = $l['user_nick'];
-                //header("location:/");
+                header("location:/");
             }
             else {
                 echo '<span style="color:red;">Username or password is incorrect!</span>';
